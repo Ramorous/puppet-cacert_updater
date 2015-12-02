@@ -23,7 +23,11 @@
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": ["12","14"]
     },
-    {"operatingsystem": "FreeBSD"}
+    {"operatingsystem": "FreeBSD"},
+	{
+	  "operatingsystem": "Windows",
+	  "operatingsystemrelease": ["XP","Vista","7","8","8.1","10","2008","2012"]
+	}
   ],
   "project_page": "https://github.com/Ramorous/puppet-cacert_updater",
   "issues_url": "https://github.com/Ramorous/puppet-cacert_updater/issues",
