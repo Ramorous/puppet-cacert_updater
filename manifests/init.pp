@@ -9,6 +9,18 @@
 #
 class cacert_updater (
   $class_enabled     = true,
-  $yaml_info         = '',
+  $yaml_info         = undef,
+  $yaml_file         = 'cacert_updater.yaml',
 ) {
+  if $class_enabled == true {
+    $var_hash = parseyaml($yaml_info)
+    if ! $var_hash {
+      $new_hash = loadyaml($yaml_file)
+    } else {
+      $new_hash = $var_hash
+    }
+    notice("${new_hash}")
+  } else {
+    notice('Class not enabled')
+  }
 }
